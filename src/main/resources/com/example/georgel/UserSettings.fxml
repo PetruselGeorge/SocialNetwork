@@ -4,22 +4,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="145.0" prefWidth="170.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.UserSettingsController">
-   <children>
-      <Button fx:id="userSettingsBackButton" layoutX="28.0" layoutY="104.0" mnemonicParsing="false" onAction="#backUserSettingsButtonOnAction" prefHeight="27.0" prefWidth="115.0" style="-fx-background-color: #15002C;" text="Back" textFill="WHITE">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Button>
-      <Button fx:id="updateAccountButton" layoutX="28.0" layoutY="14.0" mnemonicParsing="false" onAction="#updateAccountOnAction" prefHeight="27.0" prefWidth="115.0" style="-fx-background-color: #15002c;" text="Update Account" textFill="WHITE">
-         <font>
-            <Font name="Calibri Light" size="13.0" />
-         </font>
-      </Button>
-      <Button fx:id="deleteAccountButton" layoutX="28.0" layoutY="46.0" mnemonicParsing="false" onAction="#deleteAccountOnAction" prefHeight="27.0" prefWidth="115.0" style="-fx-background-color: #15002C;" text="Delete Account" textFill="WHITE">
-         <font>
-            <Font name="Calibri Light" size="13.0" />
-         </font>
-      </Button>
-   </children>
+<AnchorPane prefHeight="145.0" prefWidth="170.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.controller.UserSettingsController">
+   <Button fx:id="userSettingsBackButton" layoutX="28.0" layoutY="104.0" mnemonicParsing="false"
+           onAction="#backUserSettingsButtonOnAction" prefHeight="27.0" prefWidth="115.0"
+           style="-fx-background-color: #15002C;" text="Back" textFill="WHITE">
+      <font>
+         <Font size="13.0"/>
+      </font>
+   </Button>
+   <Button fx:id="updateAccountButton" layoutX="28.0" layoutY="14.0" mnemonicParsing="false"
+           onAction="#updateAccountOnAction" prefHeight="27.0" prefWidth="115.0" style="-fx-background-color: #15002c;"
+           text="Update Account" textFill="WHITE">
+      <font>
+         <Font name="Calibri Light" size="13.0"/>
+      </font>
+   </Button>
+   <Button fx:id="deleteAccountButton" layoutX="28.0" layoutY="46.0" mnemonicParsing="false"
+           onAction="#deleteAccountOnAction" prefHeight="27.0" prefWidth="115.0" style="-fx-background-color: #15002C;"
+           text="Delete Account" textFill="WHITE">
+      <font>
+         <Font name="Calibri Light" size="13.0"/>
+      </font>
+   </Button>
 </AnchorPane>

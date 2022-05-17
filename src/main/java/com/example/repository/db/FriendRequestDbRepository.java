@@ -1,7 +1,7 @@
 package com.example.repository.db;
 
 import com.example.domain.FriendRequest;
-import com.example.domain.validators.Validator;
+import com.example.validators.Validator;
 import com.example.repository.Repository;
 
 import java.sql.*;

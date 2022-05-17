@@ -1,11 +1,14 @@
 package com.example.controller;
 
+import com.example.domain.LoggedUser;
+import com.example.domain.User;
 import com.example.georgel.HelloApplication;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -16,6 +19,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AccountController implements Initializable {
+    private final User user = LoggedUser.user;
+    @FXML
+    public Label firstLastNameLabel;
 
     @FXML
     private Button userSettingsButton;
@@ -37,11 +43,17 @@ public class AccountController implements Initializable {
     private Button showFriendsAccountController;
     @FXML
     private Button showMessagesccountController;
+    @FXML
+    private ImageView profileImageView;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         File brandingFile = new File("Images/logo2.png");
         Image brandingImage = new Image(brandingFile.toURI().toString());
         logo2ImageView.setImage(brandingImage);
+        File profileFile=new File("C:\\Users\\petru\\IdeaProjects\\georgel\\Images\\download.png");
+        Image profileImage=new Image(profileFile.toURI().toString());
+        profileImageView.setImage(profileImage);
+        firstLastNameLabel.setText(user.getFirstName()+" "+user.getLastName());
     }
 
     public void userSettingsButtonOnAction() {

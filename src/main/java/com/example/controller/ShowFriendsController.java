@@ -1,7 +1,7 @@
 package com.example.controller;
 
 import com.example.domain.*;
-import com.example.domain.validators.*;
+import com.example.validators.*;
 import com.example.georgel.HelloApplication;
 import com.example.repository.Repository;
 import com.example.repository.db.FriendRequestDbRepository;
@@ -47,9 +47,7 @@ public class ShowFriendsController implements Initializable {
     private final Repository<Long, Message> messageRepository = new MessageDbRepository(connection, new MessageValidator());
     private final Repository<Long, FriendRequest> friendRequestRepository = new FriendRequestDbRepository(connection, new FriendRequestValidator());
     private final Service service = new Service(userRepository, friendshipRepository, messageRepository, friendRequestRepository);
-    User user = LoggedUser.user;
-    @FXML
-    private Button showFriendsDeleteButton;
+    private final User user = LoggedUser.user;
     @FXML
     private Button showFriendsBackButton;
     @FXML
@@ -111,7 +109,7 @@ public class ShowFriendsController implements Initializable {
         try {
             Stage stage = (Stage) showFriendsBackButton.getScene().getWindow();
             stage.close();
-            scene = new Scene(fxmlLoader.load(), 600, 546);
+            scene = new Scene(fxmlLoader.load(), 432, 546);
             stage.setTitle("Social Network");
             stage.setScene(scene);
             stage.show();

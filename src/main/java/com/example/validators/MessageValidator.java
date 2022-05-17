@@ -1,4 +1,4 @@
-package com.example.domain.validators;
+package com.example.validators;
 
 import com.example.domain.Message;
 

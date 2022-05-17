@@ -1,56 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="546.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.AccountController">
-   <children>
-      <Button fx:id="userSettingsButton" layoutX="465.0" layoutY="98.0" mnemonicParsing="false" onAction="#userSettingsButtonOnAction" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: #15002C;" text="User Settings" textFill="WHITE">
-         <font>
-            <Font name="Calibri Light" size="13.0" />
-         </font>
-      </Button>
-      <Button fx:id="accountControllerLogoutButton" layoutX="236.0" layoutY="454.0" mnemonicParsing="false" onAction="#accountControllerLogoutButtonOnAction" prefHeight="34.0" prefWidth="122.0" style="-fx-background-color: #15002C;" text="Logout" textFill="WHITE">
-         <font>
-            <Font name="Calibri Light" size="13.0" />
-         </font>
-      </Button>
-      <Button fx:id="accountControllerAddFriend" layoutX="14.0" layoutY="140.0" mnemonicParsing="false" onAction="#accountControllerAddFriendOnAction" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: #15002C;" text="Add Friends" textFill="WHITE">
-         <font>
-            <Font name="Calibri Light" size="13.0" />
-         </font>
-      </Button>
-      <Button fx:id="accountControllerExitButton" layoutX="236.0" layoutY="495.0" mnemonicParsing="false" onAction="#accountControllerExitButtonOnAction" prefHeight="34.0" prefWidth="122.0" style="-fx-background-color: #15002C;" text="Exit" textFill="WHITE">
-         <font>
-            <Font name="Calibri Light" size="13.0" />
-         </font>
-      </Button>
-      <AnchorPane prefHeight="86.0" prefWidth="600.0" style="-fx-background-color: #15002c;">
-         <children>
-            <ImageView fx:id="logo2ImageView" fitHeight="92.0" fitWidth="116.0" layoutX="241.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../Images/logo2.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-      <Button fx:id="accountControllerFriendRequest" layoutX="14.0" layoutY="200.0" mnemonicParsing="false" onAction="#accountControllerFriendRequestOnAction" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: #15002C;" text="Friend Requests" textFill="WHITE">
-         <font>
-            <Font name="Calibri Light" size="13.0" />
-         </font>
-      </Button>
-      <Button fx:id="showFriendsAccountController" layoutX="14.0" layoutY="265.0" mnemonicParsing="false" onAction="#showFriendsAccountControllerOnAction" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: #15002C;" text="Show Friends" textFill="WHITE">
-         <font>
-            <Font name="Calibri Light" size="13.0" />
-         </font>
-      </Button>
-      <Button fx:id="showMessagesccountController" layoutX="14.0" layoutY="321.0" mnemonicParsing="false" onAction="#showMessagesAccountControllerOnAction" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: #15002C;" text="Show Messages" textFill="WHITE">
-         <font>
-            <Font name="Calibri Light" size="13.0" />
-         </font>
-      </Button>
-   </children>
+<AnchorPane prefHeight="546.0" prefWidth="432.0" style="-fx-background-color: #ECECE7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.AccountController">
+   <Button fx:id="userSettingsButton" layoutX="244.0" layoutY="382.0" mnemonicParsing="false" onAction="#userSettingsButtonOnAction" prefHeight="42.0" prefWidth="188.0" style="-fx-background-color: #15002C;" text="User Settings" textFill="WHITE">
+      <font>
+         <Font name="Calibri Light" size="13.0" />
+      </font>
+   </Button>
+   <Button fx:id="accountControllerLogoutButton" layoutX="7.0" layoutY="482.0" mnemonicParsing="false" onAction="#accountControllerLogoutButtonOnAction" prefHeight="14.0" prefWidth="91.0" style="-fx-background-color: #15002C;" text="Logout" textFill="WHITE">
+      <font>
+         <Font name="Calibri Light" size="13.0" />
+      </font>
+   </Button>
+   <Button fx:id="accountControllerAddFriend" layoutX="244.0" layoutY="321.0" mnemonicParsing="false" onAction="#accountControllerAddFriendOnAction" prefHeight="42.0" prefWidth="188.0" style="-fx-background-color: #15002C;" text="Add Friends" textFill="WHITE">
+      <font>
+         <Font name="Calibri Light" size="13.0" />
+      </font>
+   </Button>
+   <Button fx:id="accountControllerExitButton" layoutX="7.0" layoutY="515.0" mnemonicParsing="false" onAction="#accountControllerExitButtonOnAction" prefHeight="16.0" prefWidth="91.0" style="-fx-background-color: #15002C;" text="Exit" textFill="WHITE">
+      <font>
+         <Font name="Calibri Light" size="13.0" />
+      </font>
+   </Button>
+   <AnchorPane prefHeight="90.0" prefWidth="434.0" style="-fx-background-color: #15002c;">
+      <ImageView fx:id="logo2ImageView" fitHeight="92.0" fitWidth="116.0" layoutX="159.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../../../../Images/logo2.png" />
+      </ImageView>
+   </AnchorPane>
+   <Button fx:id="accountControllerFriendRequest" layoutX="244.0" layoutY="139.0" mnemonicParsing="false" onAction="#accountControllerFriendRequestOnAction" prefHeight="42.0" prefWidth="188.0" style="-fx-background-color: #15002C;" text="Friend Requests" textFill="WHITE">
+      <font>
+         <Font name="Calibri Light" size="13.0" />
+      </font>
+   </Button>
+   <Button fx:id="showFriendsAccountController" layoutX="244.0" layoutY="260.0" mnemonicParsing="false" onAction="#showFriendsAccountControllerOnAction" prefHeight="42.0" prefWidth="188.0" style="-fx-background-color: #15002C;" text="Show Friends" textFill="WHITE">
+      <font>
+         <Font name="Calibri Light" size="13.0" />
+      </font>
+   </Button>
+   <Button fx:id="showMessagesccountController" layoutX="244.0" layoutY="200.0" mnemonicParsing="false" onAction="#showMessagesAccountControllerOnAction" prefHeight="42.0" prefWidth="188.0" style="-fx-background-color: #15002C;" text="Show Messages" textFill="WHITE">
+      <font>
+         <Font name="Calibri Light" size="13.0" />
+      </font>
+   </Button>
+   <ImageView fx:id="logo2ImageView1" fitHeight="32.0" fitWidth="55.0" layoutX="391.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../../../../../Images/logo2.png" />
+   </ImageView>
+   <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile picture:" wrappingWidth="102.86328125">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Text>
+   <ImageView fx:id="profileImageView" fitHeight="147.0" fitWidth="181.0" layoutX="-9.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../../../../../Images/download.png" />
+   </ImageView>
+   <Label fx:id="firstLastNameLabel" layoutX="21.0" layoutY="281.0" prefHeight="17.0" prefWidth="122.0">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
 </AnchorPane>

@@ -1,4 +1,4 @@
-package com.example.domain.validators;
+package com.example.validators;
 
 public interface Validator <T> {
     void validate(T entity)throws ValidationException;

@@ -1,9 +1,7 @@
-package com.example.domain.validators;
+package com.example.validators;
 
 
 import com.example.domain.User;
-import com.example.repository.Repository;
-import com.example.repository.db.UsersDbRepository;
 
 public class UserValidator implements Validator<User> {
     @Override

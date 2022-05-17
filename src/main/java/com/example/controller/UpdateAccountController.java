@@ -1,7 +1,7 @@
 package com.example.controller;
 
 import com.example.domain.*;
-import com.example.domain.validators.*;
+import com.example.validators.*;
 import com.example.georgel.HelloApplication;
 import com.example.repository.Repository;
 import com.example.repository.db.FriendRequestDbRepository;

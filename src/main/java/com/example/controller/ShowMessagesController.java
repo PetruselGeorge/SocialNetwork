@@ -1,7 +1,7 @@
 package com.example.controller;
 
 import com.example.domain.*;
-import com.example.domain.validators.*;
+import com.example.validators.*;
 import com.example.georgel.HelloApplication;
 import com.example.repository.Repository;
 import com.example.repository.db.FriendRequestDbRepository;
@@ -100,7 +100,7 @@ public class ShowMessagesController implements Initializable {
         try {
             Stage stage = (Stage) showMessagesBackButton.getScene().getWindow();
             stage.close();
-            scene = new Scene(fxmlLoader.load(), 600, 546);
+            scene = new Scene(fxmlLoader.load(), 432, 546);
             stage.setTitle("Social Network");
             stage.setScene(scene);
             stage.show();

@@ -1,7 +1,7 @@
 package com.example.controller;
 
 import com.example.domain.*;
-import com.example.domain.validators.*;
+import com.example.validators.*;
 import com.example.georgel.HelloApplication;
 import com.example.repository.Repository;
 import com.example.repository.db.FriendRequestDbRepository;
@@ -28,7 +28,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class FriendRequestController implements Initializable {
@@ -48,7 +47,7 @@ public class FriendRequestController implements Initializable {
     private final Repository<Long, Message> messageRepository = new MessageDbRepository(connection, new MessageValidator());
     private final Repository<Long, FriendRequest> friendRequestRepository = new FriendRequestDbRepository(connection, new FriendRequestValidator());
     private final Service service = new Service(userRepository, friendshipRepository, messageRepository, friendRequestRepository);
-    User user = LoggedUser.user;
+    private final User user = LoggedUser.user;
     @FXML
     private TableView<FriendRequest> friendRequestTableView;
     @FXML
@@ -74,7 +73,7 @@ public class FriendRequestController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         friendRequests.addAll(friendRequestsUser());
-        friendRequestEmailTableColumn.setCellValueFactory(new PropertyValueFactory<>("emailId2"));
+        friendRequestEmailTableColumn.setCellValueFactory(new PropertyValueFactory<>("email_id1"));
         friendRequestStatusTableColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
         friendrequestDateTableColumn.setCellValueFactory(new PropertyValueFactory<>("friendRequestDate"));
         friendRequestTableView.setItems(friendRequests);
@@ -122,7 +121,7 @@ public class FriendRequestController implements Initializable {
         try {
             Stage stage = (Stage) friendRequestBackButton.getScene().getWindow();
             stage.close();
-            scene = new Scene(fxmlLoader.load(), 600, 546);
+            scene = new Scene(fxmlLoader.load(), 432, 546);
             stage.setTitle("Social Network");
             stage.setScene(scene);
             stage.show();

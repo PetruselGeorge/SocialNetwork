@@ -1,4 +1,4 @@
-package com.example.domain.validators;
+package com.example.validators;
 
 public class ValidationException extends RuntimeException {
     public ValidationException(String message) {

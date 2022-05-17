@@ -1,6 +1,6 @@
 package com.example.domain;
 
-import java.io.Serial;
+
 import java.io.Serializable;
 
 public class Entity<ID> implements Serializable {

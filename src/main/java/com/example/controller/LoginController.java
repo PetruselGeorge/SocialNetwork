@@ -1,10 +1,10 @@
 package com.example.controller;
 
 import com.example.domain.*;
-import com.example.domain.validators.FriendRequestValidator;
-import com.example.domain.validators.FriendshipValidator;
-import com.example.domain.validators.MessageValidator;
-import com.example.domain.validators.UserValidator;
+import com.example.validators.FriendRequestValidator;
+import com.example.validators.FriendshipValidator;
+import com.example.validators.MessageValidator;
+import com.example.validators.UserValidator;
 import com.example.georgel.HelloApplication;
 import com.example.repository.Repository;
 import com.example.repository.db.FriendRequestDbRepository;
@@ -96,11 +96,12 @@ public class LoginController implements Initializable {
                 User user2 = userRepository.findOne(user.getId());
                 LoggedUser.setUser(user2);
                 FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("account_controller.fxml"));
+
                 Scene scene;
                 try {
                     Stage stage = (Stage) LoginButton.getScene().getWindow();
                     stage.close();
-                    scene = new Scene(fxmlLoader.load(), 600, 546);
+                    scene = new Scene(fxmlLoader.load(), 432, 546);
                     stage.setTitle("Your Account");
                     stage.setScene(scene);
                     stage.show();

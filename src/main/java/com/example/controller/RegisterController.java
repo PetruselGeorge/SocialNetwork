@@ -4,7 +4,7 @@ import com.example.domain.FriendRequest;
 import com.example.domain.Friendship;
 import com.example.domain.Message;
 import com.example.domain.User;
-import com.example.domain.validators.*;
+import com.example.validators.*;
 import com.example.georgel.HelloApplication;
 import com.example.repository.Repository;
 import com.example.repository.db.FriendRequestDbRepository;
@@ -29,6 +29,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.regex.Pattern;
 
 public class RegisterController {
     Connection connection;
@@ -78,23 +79,34 @@ public class RegisterController {
     }
 
     public void createAccountButtonOnAction() {
-        try {
+        try {errorMessageLabel.setText("");
             createAccoutValidation();
             service.saveUser(firstnameTextField.getText(), lastnameTextField.getText(), emailTextField.getText(), passwordPasswordField.getText());
 
         } catch (IllegalArgumentException | ValidationException  exception) {
             errorMessageLabel.setText(exception.getMessage());
         }
+
         if (errorMessageLabel.getText().isBlank()) {
             cancelRegistrationButtonOnAction();
         }
     }
 
     public void createAccoutValidation(){
+        String email_val="^(.+)@(.+)$";
+        String pass_val="^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,20}$";
+        Pattern pattern_email_val=Pattern.compile(email_val);
+        Pattern pattern_pass_val=Pattern.compile(pass_val);
         for (User user:userRepository.findAll()){
             if (user.getEmail().equals(emailTextField.getText()))
             {
                 throw new IllegalArgumentException("This email already exists!");
+            }
+            if (!pattern_email_val.matcher(emailTextField.getText()).matches()){
+                throw new IllegalArgumentException("The email is incorrect!");
+            }
+            if (!pattern_pass_val.matcher(passwordPasswordField.getText()).matches()){
+                throw new IllegalArgumentException("The password must contain one numeric, lowercase, uppercase character, one special symbol among @#$% and password length should be 8-20 ");
             }
         }
     }
